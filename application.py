@@ -11,7 +11,7 @@ def get_products():
     conn.close()
     return products
 
-@app.route('/')
+@application.route('/')
 def index():
     products = get_products()
     return render_template('index.html', products=products)
